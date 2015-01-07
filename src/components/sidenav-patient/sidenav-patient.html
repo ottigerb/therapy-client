@@ -1,0 +1,65 @@
+<div ng-controller="SidenavPatient">
+
+    <md-content ng-style="style()" resize style="background-color: #F5F5F5;">
+        <section>
+
+            <div layout="row" layout-margin layout-fill layout-padding style="margin-top: -15px;">
+                <div flex="5" style="color: #BDBDBD; margin-top: 38px;">
+                    <i class="small mdi-action-search"></i>
+                </div>
+                <div flex>
+                    <md-text-float label="Filter / Search" ng-model="filterText"></md-text-float>
+                </div>
+            </div>
+        </section>
+
+        <section style="margin-top: -30px;">
+            <md-subheader class="md-accent" style="background-color: #F5F5F5;">
+                Favoriten
+            </md-subheader>
+            <md-list layout="column">
+                <md-item ng-repeat="item in todos | filter:filterText">
+                    <md-item-content>
+                        <div class="md-tile-left">
+                            <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">
+                            <md-tooltip>
+                                {{item.notes}}
+                            </md-tooltip>
+                        </div>
+                        <div class="md-tile-content">
+                            <h3>{{item.who}}</h3>
+                            <h4 class="title-sub">{{item.what}}</h4>
+
+                        </div>
+                    </md-item-content>
+                    <md-divider></md-divider>
+                </md-item>
+            </md-list>
+        </section>
+
+        <section>
+            <md-subheader class="md-warn" style="background-color: #F5F5F5;">
+                All Patients
+            </md-subheader>
+            <md-list>
+                <md-item ng-repeat="item in todos | filter:filterText">
+                    <md-item-content>
+                        <div class="md-tile-left">
+                            <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">
+                            <md-tooltip>
+                                {{item.notes}}
+                            </md-tooltip>
+                        </div>
+                        <div class="md-tile-content">
+                            <h3>{{item.who}}</h3>
+                            <h4 class="title-sub">{{item.what}}</h4>
+
+                        </div>
+                    </md-item-content>
+                    <md-divider></md-divider>
+                </md-item>
+            </md-list>
+        </section>
+
+    </md-content>
+</div>

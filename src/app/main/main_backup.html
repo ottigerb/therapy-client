@@ -1,0 +1,395 @@
+<!-- Dropdown Structure -->
+<ul id="dropdown1" class="dropdown-content">
+    <li><a href="#!">one</a>
+    </li>
+    <li><a href="#!">two</a>
+    </li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a>
+    </li>
+</ul>
+<nav>
+    <div class="nav-wrapper">
+        <div class="col s12">
+            <a href="#!" class="brand-logo">Logo</a>
+            <ul class="right side-nav">
+                <li><a href="sass.html">Sass</a>
+                </li>
+                <li><a href="components.html">Components</a>
+                </li>
+                <!-- Dropdown Trigger -->
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="mdi-navigation-arrow-drop-down right"></i></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div layout="row" layout-fill>
+  <div flex="66" flex-sm="20">
+    I flex to one-third of the space on mobile, and two-thirds on other devices.
+  </div>
+  <div flex="33" flex-sm="80">
+    I flex to two-thirds of the space on mobile, and one-third on other devices.
+  </div>
+</div>
+
+<div layout="column" layout-fill layout-align="end center">
+    <div flex="70">I'm above.</div>
+    <div>
+        <div layout="row" layout-margin>
+            <div flex flex-order="3">
+                [flex-order="3"]
+            </div>
+            <div flex flex-order="2">
+                [flex-order="2"]
+            </div>
+            <div flex flex-order="1">
+                [flex-order="1"]
+            </div>
+        </div>
+    </div>
+</div>
+
+<div layout="row">
+  <div flex="33">
+    [flex="33"]
+  </div>
+  <div flex="55">
+    [flex="55"]
+  </div>
+  <div flex>
+    [flex]
+  </div>
+</div>
+
+<div class="col s12">
+    <ul class="tabs">
+        <li class="tab col s2"><a href="#test1">Test 1</a>
+        </li>
+        <li class="tab col s2"><a href="#test2">Test 2</a>
+        </li>
+        <li class="tab col s2"><a href="#test3">Test 3</a>
+        </li>
+        <li class="tab col s2"><a href="#test4">Test 4</a>
+        </li>
+    </ul>
+</div>
+<div id="test1" class="col s12">
+
+    <h1>{{data.selectedIndex}}</h1>
+
+    <a class="btn-floating btn-large waves-effect waves-light red"><i class="mdi-content-add"></i></a>
+</div>
+<div id="test2" class="col s12">Test 2</div>
+<div id="test3" class="col s12">Test 3</div>
+<div id="test4" class="col s12">Test 4</div>
+
+<a class="btn" ng-click="toggleLeft()" data-position="bottom" data-tooltip="I am tooltip"> SHOW me TOOLTIP</a>
+
+
+<a class="btn" onclick="toast('I am a toast', 4000)">Toast!</a>
+
+<div class="col s12">
+    <ul class="tabs">
+        <li class="tab col s2"><a href="#testa1">Test 1</a>
+        </li>
+        <li class="tab col s2"><a href="#testa2">Test 2</a>
+        </li>
+        <li class="tab col s2"><a href="#testa3">Test 3</a>
+        </li>
+        <li class="tab col s2"><a href="#testa4">Test 4</a>
+        </li>
+    </ul>
+</div>
+<div id="testa1" class="col s12">
+    <i class="small mdi-navigation-arrow-back"></i>
+    <i class="medium mdi-navigation-arrow-back"></i>
+    <i class="large mdi-navigation-arrow-back"></i>
+</div>
+<div id="testa2" class="col s12">Test 2</div>
+<div id="testa3" class="col s12">Test 3</div>
+<div id="testa4" class="col s12">Test 4</div>
+
+<script>
+$(document).ready(function() {
+    // the "href" attribute of .modal-trigger must specify the modal ID that wants to be triggered
+    $('.modal-trigger').leanModal();
+});
+</script>
+
+<!-- Modal Trigger -->
+<a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+<!-- Modal Structure -->
+<div id="modal1" class="modal" style="height=100%;">
+    <h4>Modal Header</h4>
+    <p>A bunch of text</p>
+    <a href="#" class="waves-effect btn-flat modal-close">Agree</a>
+</div>
+
+
+
+
+<script>
+$(document).ready(function() {
+    $('.dropdown-button').dropdown({
+        constrain_width: true, // Does change width of dropdown to that of the activator
+        hover: false // Activate on click
+    });
+
+
+    $('ul.tabs').tabs();
+});
+</script>
+
+
+<!-- Dropdown Trigger -->
+<a class='dropdown-button btn' href='#' data-activates='dropdown1'>Drop Me!</a>
+
+<!-- Dropdown Structure -->
+<ul id='dropdown1' class='dropdown-content'>
+    <li><a href="#!">one</a>
+    </li>
+    <li><a href="#!">two</a>
+    </li>
+    <li class="divider"></li>
+    <li><a href="#!">three</a>
+    </li>
+</ul>
+
+
+
+
+<div class="row">
+
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+    <div class="col s12 m6 l4">
+        <p>s12 m4</p>
+    </div>
+</div>
+<div class="row">
+    <div class="col s12 m6 l3">
+        <p>s12 m6 l3</p>
+    </div>
+    <div class="col s12 m6 l3">
+        <p>s12 m6 l3</p>
+    </div>
+    <div class="col s12 m6 l3">
+        <p>s12 m6 l3</p>
+    </div>
+    <div class="col s12 m6 l3">
+        <p>s12 m6 l3</p>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s6">
+        <div class="card">
+            <div class="card-image waves-effect waves-block waves-light">
+                <img src="http://s3.amazonaws.com/rapgenius/filepicker%2FEMADv4TRB26cYmN3gyg7_flow.jpg">
+            </div>
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i>
+                </span>
+                <p><a href="#">This is a link</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i>
+                </span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col s6">
+        <div class="card">
+
+            <div class="card-content">
+                <span class="card-title activator grey-text text-darken-5">Card Title <i class="mdi-navigation-more-vert right"></i>
+                </span>
+                <p class="flow-text">I am Flow Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique nostrum dignissimos quam sunt nihil, illo ab quo voluptatibus molestias cumque hic asperiores culpa dolorum, ipsam dolor, et minima natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veniam, architecto? Adipisci a veniam pariatur soluta quos provident asperiores sapiente. Nisi ullam accusantium laboriosam aperiam reiciendis aliquam ratione, delectus voluptates.</p>
+                <p><a href="#">This is a link</a>
+                </p>
+            </div>
+            <div class="card-reveal">
+                <span class="card-title grey-text text-darken-5">Card Title <i class="mdi-navigation-close right"></i>
+                </span>
+                <p>Here is some more information about this product that is only revealed once clicked on.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div layout="column">
+    <div>I'm above.</div>
+    <div>I'm below.</div>
+</div>
+
+
+<div layout="row" layout-margin>
+    <div flex flex-order="3">
+        [flex-order="3"]
+    </div>
+    <div flex flex-order="2">
+        [flex-order="2"]
+    </div>
+    <div flex flex-order="1">
+        [flex-order="1"]
+    </div>
+</div>
+
+<div class="row">
+    <div class="col s1">1</div>
+    <div class="col s1">2</div>
+    <div class="col s1">3</div>
+    <div class="col s1">4</div>
+    <div class="col s1">5</div>
+    <div class="col s1">6</div>
+    <div class="col s1">7</div>
+    <div class="col s1">8</div>
+    <div class="col s1">9</div>
+    <div class="col s1">10</div>
+    <div class="col s1">11</div>
+    <div class="col s1">12</div>
+</div>
+
+
+<a class="waves-effect waves-light btn-large">Button</a>
+
+<div class="row">
+    <div class="col s12">This div is 12-columns wide</div>
+    <div class="col s6">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea class="materialize-textarea" required></textarea>
+                        <label>Textarea</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <i class="mdi-action-account-circle prefix"></i>
+                        <input id="icon_prefix" type="text">
+                        <label for="icon_prefix">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <i class="mdi-communication-phone prefix"></i>
+                        <input id="icon_telephone" type="text">
+                        <label for="icon_telephone">Telephone</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+    <div class="col s6">
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input id="first_name" type="text" class="validate">
+                        <label for="first_name">First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input id="last_name" type="text" class="validate">
+                        <label for="last_name">Last Name</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="email" type="email" class="validate">
+                        <label for="email">Email</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+
+<p class="flow-text">I am Flow Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique nostrum dignissimos quam sunt nihil, illo ab quo voluptatibus molestias cumque hic asperiores culpa dolorum, ipsam dolor, et minima natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veniam, architecto? Adipisci a veniam pariatur soluta quos provident asperiores sapiente. Nisi ullam accusantium laboriosam aperiam reiciendis aliquam ratione, delectus voluptates.</p>
+<blockquote>
+    This is an example quotation that uses the blockquote tag.
+</blockquote>
+
+<form action="#">
+    <p class="range-field">
+        <input type="range" id="test5" min="0" max="100" />
+    </p>
+</form>
+
+
+
+
+
+
+
+<md-tabs class="md-accent" md-selected="data.selectedIndex">
+    <md-tab id="tab1" aria-controls="tab1-content">
+        Item One
+    </md-tab>
+    <md-tab id="tab2" aria-controls="tab2-content" ng-disabled="data.secondLocked">
+        {{data.secondLabel}}
+    </md-tab>
+    <md-tab id="tab3" aria-controls="tab3-content">
+        Item Three
+    </md-tab>
+</md-tabs>
+<ng-switch on="data.selectedIndex" class="tabpanel-container">
+    <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
+        View for Item #1
+        <br/>data.selectedIndex = 0
+    </div>
+    <div role="tabpanel" id="tab2-content" aria-labelledby="tab2" ng-switch-when="1" md-swipe-left="next()" md-swipe-right="previous()">
+        View for {{data.secondLabel}}
+        <br/>data.selectedIndex = 1
+    </div>
+    <div role="tabpanel" id="tab3-content" aria-labelledby="tab3" ng-switch-when="2" md-swipe-left="next()" md-swipe-right="previous()">
+        View for Item #3
+        <br/>data.selectedIndex = 2
+    </div>
+</ng-switch>
+<div class="after-tabs-area" layout="row" layout-sm="column" layout-margin layout-align="left center">
+    <md-text-float type="number" label="Selected Index" ng-model="data.selectedIndex"></md-text-float>
+    <div flex></div>
+    <span>Item Two:</span>
+    <md-checkbox ng-model="data.secondLocked" aria-label="Disabled">
+        Disabled
+    </md-checkbox>
+</div>
+
+
+
+<header ng-include="'components/navbar/navbar.html'"></header>

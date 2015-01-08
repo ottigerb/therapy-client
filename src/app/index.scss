@@ -29,7 +29,7 @@ html {
 
 body {
   background-color: #F5F5F5;
-  background-image: url("../assets/images/body_bg_blue_grey_800.png");
+  background-image: url("../assets/images/body_bg_grey_400.gif");
   background-repeat: repeat-x;
 }
 
@@ -67,10 +67,10 @@ body {
     }
 
     .optinomic-view {
-      margin-left: 0.8em;
+      margin-left: 1.1em;
       margin-bottom: 48px;
       margin-right: 0.8em;
-      margin-top: 48px;
+      margin-top: 60px;
     }
 
 }
@@ -99,7 +99,7 @@ body {
 }
 
 .optinomic-controls-left > h5 {
-  color: $bluegrey_lightPrimaryColor;
+  color: $bluegrey_darkPrimaryColor;
   font-size: 1.3em;
 }
 
@@ -111,7 +111,7 @@ body {
 }
 
 .optinomic-controls-right > h5 {
-  color: $bluegrey_lightPrimaryColor;
+  color: $bluegrey_darkPrimaryColor;
   font-size: 1.2em;
 }
 

@@ -60,7 +60,7 @@ app.directive('resize', function($window) {
 
                 if (newValue.w >= 960) {
                     return {
-                        'height': (newValue.h - 114) + 'px',
+                        'height': (newValue.h - 75) + 'px',
                         'width': 100 + '%'
                     };
                 }

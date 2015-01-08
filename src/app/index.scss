@@ -16,7 +16,6 @@ $pink_accentColor:        #536DFE;
 $bluegrey_darkPrimaryColor:   #455A64;
 $bluegrey_primaryColor:       #607D8B;
 $bluegrey_lightPrimaryColor:  #CFD8DC;
-$bluegrey_textPrimaryColor:   #FFFFFF;
 $bluegrey_accentColor:        #9E9E9E;
 
 $primaryTextColor:   #212121;
@@ -35,11 +34,11 @@ body {
 }
 
 
-[layout=row] {
-  flex-direction: row;
-}
-
 @media (min-width: $breakpoint)  {
+      
+    body {
+        overflow:hidden;
+    }
 
     .optinomic-page{
       position: relative;
@@ -49,9 +48,38 @@ body {
       max-width: 1024px;
       color: $primaryTextColor;
     }
+
+    .optinomic-view {
+      margin-left: 48px;
+      margin-bottom: 48px;
+      margin-right: 24px;
+      margin-top: 24px;
+    }
+
+}
+
+@media (max-width: $breakpoint)  {
+      
+    .optinomic-page-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+
+    .optinomic-view {
+      margin-left: 0.8em;
+      margin-bottom: 48px;
+      margin-right: 0.8em;
+      margin-top: 48px;
+    }
+
 }
 
 
+
+[layout=row] {
+  flex-direction: row;
+}
 
 
 
@@ -87,12 +115,7 @@ body {
   font-size: 1.2em;
 }
 
-.optinomic-view {
-  margin-left: 48px;
-  margin-bottom: 48px;
-  margin-right: 24px;
-  margin-top: 48px;
-}
+
 
 .md-tile-content {
   position: relative;

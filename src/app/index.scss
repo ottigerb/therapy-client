@@ -30,6 +30,7 @@ html {
 body {
   background-color: #F5F5F5;
   background-image: url("../assets/images/body_bg_grey_400.gif");
+  background-size: auto 112px;
   background-repeat: repeat-x;
 }
 
@@ -121,6 +122,13 @@ body {
   position: relative;
   height: 48px;
   top: -24px;
+}
+
+.md-tile-content > h3{
+  color: $primaryTextColor;
+}
+.md-tile-content > h4{
+  color: $secondaryTextColor;
 }
 
 .title-sub {

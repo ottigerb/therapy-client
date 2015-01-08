@@ -38,7 +38,7 @@
 
         <section layout="row" flex>
 
-            <md-sidenav class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$media('gt-md')">
+            <md-sidenav class="md-sidenav-left md-whiteframe-z1" md-component-id="left" md-is-locked-open="$media('gt-md')" style="background-color: #F5F5F5;">
                 <div ng-include="'components/sidenav/sidenav.html'"></div>
             </md-sidenav>
 
@@ -54,7 +54,7 @@
                     </h5>
                 </div>
 
-                <md-toolbar class="md-accent optinomic-page-header">
+                <md-toolbar ng-class="data.color" class="optinomic-page-header">
                     <div class="md-toolbar-tools md-whiteframe-z1">
                         <md-button ng-click="toggleLeft()" hide-gt-md aria-label="Open Sidenav Left">
                             <i class="small mdi-navigation-menu"></i>
@@ -64,12 +64,12 @@
                         </span>
                         <!-- fill up the space between left and right area -->
                         <span flex></span>
-                        <md-button>
+                        <md-button aria-label="Open Sidenav Left">
                             <i class="small mdi-navigation-more-vert"></i>
                         </md-button>
                     </div>
                 </md-toolbar>
-                <md-content class="md-accent md-whiteframe-z1">
+                <md-content ng-class="data.color" class="md-whiteframe-z1">
                     <div ng-view class="optinomic-view"></div>
                 </md-content>
             </div>
@@ -124,6 +124,7 @@
     <script src="components/sidenav/sidenav.controller.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
+    <script src="app/app_factory.js"></script>
     <!-- endinject -->
 
     <!-- inject:partials -->

@@ -1,6 +1,6 @@
-<div ng-controller="SidenavPatient" style="background-color: #F5F5F5;">
+<div ng-controller="SidenavPatient">
 
-    <md-content ng-style="style()" resize style="background-color: #F5F5F5;">
+    <md-content ng-style="styleNavbar()" resize style="background-color: #F5F5F5;">
         <section>
 
             <div layout="row" layout-margin layout-fill layout-padding style="margin-top: -15px;">
@@ -8,7 +8,7 @@
                     <i class="small mdi-action-search"></i>
                 </div>
                 <div flex>
-                    <md-text-float label="Filter / Search" ng-model="filterText"></md-text-float>
+                    <md-text-float label="Filter / Search" ng-model="data.user_search"></md-text-float>
                 </div>
             </div>
         </section>
@@ -18,7 +18,7 @@
                 Favoriten
             </md-subheader>
             <md-list layout="column">
-                <md-item ng-repeat="item in todos | filter:filterText">
+                <md-item ng-repeat="item in todos | filter:data.user_search">
                     <md-item-content>
                         <div class="md-tile-left">
                             <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">
@@ -42,7 +42,7 @@
                 All Patients
             </md-subheader>
             <md-list>
-                <md-item ng-repeat="item in todos | filter:filterText">
+                <md-item ng-repeat="item in todos | filter:data.user_search">
                     <md-item-content>
                         <div class="md-tile-left">
                             <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">

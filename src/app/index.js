@@ -22,14 +22,14 @@ app.config(function($mdThemingProvider) {
             'hue-2': '300', // use shade 800 for the <code>md-hue-2</code> class
             'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
         })
-        // If you specify less than all of the keys, it will inherit from the
-        // default shades
-        .accentColor('indigo', {
-            'default': '500', // use shade 500 for default, and keep all other shades the same
-            'hue-1': '800', // use shade 100 for the <code>md-hue-1</code> class
-            'hue-2': '300', // use shade 800 for the <code>md-hue-2</code> class
-            'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
-        })
+    // If you specify less than all of the keys, it will inherit from the
+    // default shades
+    .accentColor('indigo', {
+        'default': '500', // use shade 500 for default, and keep all other shades the same
+        'hue-1': '800', // use shade 100 for the <code>md-hue-1</code> class
+        'hue-2': '300', // use shade 800 for the <code>md-hue-2</code> class
+        'hue-3': 'A100' // use shade A100 for the <code>md-hue-3</code> class
+    })
         .warnColor('pink', {
             'default': '500', // use shade 500 for default, and keep all other shades the same
             'hue-1': '800', // use shade 100 for the <code>md-hue-1</code> class
@@ -64,6 +64,12 @@ app.directive('resize', function($window) {
                         'width': 100 + '%'
                     };
                 }
+            };
+            scope.styleNavbar = function() {
+                return {
+                    'height': (newValue.h - 115) + 'px',
+                    'width': 100 + '%'
+                };
             };
 
 

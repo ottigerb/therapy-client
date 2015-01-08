@@ -1,16 +1,17 @@
 <div ng-controller="SidenavCtrl">
 
 
-    <div layout="column" layout-fill >
-        <md-toolbar class="md-primary">
+    <div layout="column" layout-fil >
+        <md-toolbar ng-class="data.color">
             <div class="md-toolbar-tools">
                 <span show-gt-md>Optinomic</span>
-                <span hide-sm hide-md show-gt-md>
-                    <small>{{ date | date:'dd.MM.yyyy' }}</small>
-                </span>
+                
 
                 <!-- fill up the space between left and right area -->
                 <span flex></span>
+                <span hide-sm hide-md show-gt-md>
+                    <small>{{ date | date:'dd.MM.yyyy' }}</small>
+                </span>
 
                 <md-button ng-click="toggleLeft()" hide-gt-md aria-label="Close Sidenavigation - Left">
                     <i class="small mdi-navigation-close"></i>
@@ -19,7 +20,7 @@
             </div>
         </md-toolbar>
 
-        <md-tabs md-selected="data.selectedIndex" md-stretch-tabs="never" class="md-primary">
+        <md-tabs md-selected="data.selectedIndex" md-stretch-tabs="never" ng-class="data.color">
             <md-tab id="tab1" aria-controls="tab1-content">
                 Patient
             </md-tab>
@@ -34,7 +35,7 @@
 
 
 
-        <md-content ng-controller="LeftCtrl" ng-style="style()" resize>
+        <md-content ng-controller="LeftCtrl">
             <ng-switch on="data.selectedIndex" class="tabpanel-container md-primary">
                 <div role="tabpanel" id="tab1-content" aria-labelledby="tab1" ng-switch-when="0" md-swipe-left="next()" md-swipe-right="previous()">
                     <div ng-include="'components/sidenav-patient/sidenav-patient.html'"></div>

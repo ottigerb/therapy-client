@@ -1,0 +1,29 @@
+
+
+.view-slide-in.ng-enter {
+  transition: all 750ms ease;
+  -webkit-transition:all 750ms ease;
+  -moz-transition: all 750ms ease;
+  -o-transition: all 750ms ease;
+   
+  position:relative;
+  opacity:0;
+  top:20px;
+  left:0px;
+}
+
+.view-slide-in.ng-enter.ng-enter-active {
+  top:0;
+  left:0;
+  opacity: 1;
+}
+.view-slide-in.ng-leave.ng-leave-active{
+  top:20px;
+  left:0px;
+  opacity:1;
+}
+.view-slide-in.ng-leave{
+  top:0;
+  left:0;
+  opacity:0;
+}

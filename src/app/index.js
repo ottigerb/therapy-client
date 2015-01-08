@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('therapyClient', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute', 'ngMaterial']);
+var app = angular.module('therapyClient', ['ngFx', 'ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngResource', 'ngRoute', 'ngMaterial']);
 
 app.config(function($routeProvider) {
     $routeProvider

@@ -18,7 +18,7 @@
                 Favoriten
             </md-subheader>
             <md-list layout="column">
-                <md-item ng-repeat="item in todos | filter:data.user_search">
+                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in todos | filter:data.user_search">
                     <md-item-content>
                         <div class="md-tile-left">
                             <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">

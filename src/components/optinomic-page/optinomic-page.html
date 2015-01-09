@@ -1,0 +1,63 @@
+<div layout="column" layout-fill class="md-whiteframe-z2" ng-style="style()" resize>
+
+    <div hide-sm hide-md class="optinomic-controls-left">
+        <h5>Optinomic</h5>
+    </div>
+    <div hide-sm hide-md class="optinomic-controls-right">
+
+        <!-- Dropdown Trigger -->
+        <a class='dropdown-button waves-teal btn-flat' data-activates='dropdown1'>
+            <h5 style="font-size: 1.2em;">Ottiger Beat
+                <i class="small mdi-navigation-arrow-drop-down"></i>
+            </h5>
+        </a>
+
+        <!-- Dropdown Structure -->
+        <ul id='dropdown1' class='dropdown-content'>
+            <li><a href="#!">one</a>
+            </li>
+            <li><a href="#!">two</a>
+            </li>
+            <li class="divider"></li>
+            <li><a href="#/patient/1234">three</a>
+            </li>
+        </ul>
+
+    </div>
+
+    
+
+    <md-toolbar ng-class="data.color" class="optinomic-page-header">
+        <div class="md-toolbar-tools md-whiteframe-z1">
+            <md-button ng-click="toggleLeft()" hide-gt-lg aria-label="Open Sidenav Left">
+                <i class="small mdi-navigation-menu"></i>
+            </md-button>
+            <span>
+                Patientname
+            </span>
+            <!-- fill up the space between left and right area -->
+            <span flex></span>
+            <md-button aria-label="Open Sidenav Left">
+                <i class="small mdi-navigation-more-vert"></i>
+            </md-button>
+        </div>
+    </md-toolbar>
+    <md-content ng-class="data.color" class="md-whiteframe-z1">
+
+        <div ng-transclude class="optinomic-view"></div>
+
+    </md-content>
+</div>
+
+
+<script>
+$(document).ready(function() {
+    $('.dropdown-button').dropdown(
+
+        {
+            constrain_width: true, // Does not change width of dropdown to that of the activator
+            hover: false // Activate on click
+        }
+    );
+});
+</script>

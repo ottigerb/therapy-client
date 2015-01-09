@@ -43,36 +43,7 @@
             </md-sidenav>
 
 
-            <div layout="column" layout-fill class="optinomic-page md-whiteframe-z2" ng-style="style()" resize>
-
-                <div hide-sm hide-md class="optinomic-controls-left">
-                    <h5>Optinomic</h5>
-                </div>
-                <div hide-sm hide-md class="optinomic-controls-right">
-                    <h5>Ottiger Beat
-                        <i class="small mdi-navigation-arrow-drop-down"></i>
-                    </h5>
-                </div>
-
-                <md-toolbar ng-class="data.color" class="optinomic-page-header">
-                    <div class="md-toolbar-tools md-whiteframe-z1">
-                        <md-button ng-click="toggleLeft()" hide-gt-lg aria-label="Open Sidenav Left">
-                            <i class="small mdi-navigation-menu"></i>
-                        </md-button>
-                        <span>
-                            Patientname
-                        </span>
-                        <!-- fill up the space between left and right area -->
-                        <span flex></span>
-                        <md-button aria-label="Open Sidenav Left">
-                            <i class="small mdi-navigation-more-vert"></i>
-                        </md-button>
-                    </div>
-                </md-toolbar>
-                <md-content ng-class="data.color" class="md-whiteframe-z1">
-                    <div ng-view class="optinomic-view view-slide-in"></div>
-                </md-content>
-            </div>
+            <div ng-view class="optinomic-page view-slide-in"></div>
 
         </section>
 
@@ -118,11 +89,13 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <!-- inject:js -->
     <script src="app/index.js"></script>
     <script src="components/sidenav-patient/sidenav-patient.controller.js"></script>
     <script src="components/sidenav/sidenav.controller.js"></script>
+    <script src="components/optinomic-page/optinomic-page.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
     <script src="app/main/main.controller.js"></script>
     <script src="app/app_factory.js"></script>

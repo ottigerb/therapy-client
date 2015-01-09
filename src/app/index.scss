@@ -113,15 +113,9 @@ body {
 .optinomic-controls-right {
   position: absolute;
   z-index: 200;
-  top: -66px;
-  right: 24px;
+  top: -60px;
+  right: 0;
 }
-
-.optinomic-controls-right > h5 {
-  color: $bluegrey_darkPrimaryColor;
-  font-size: 1.2em;
-}
-
 
 
 .md-tile-content {
@@ -136,6 +130,7 @@ body {
 .md-tile-content > h4{
   color: $secondaryTextColor;
 }
+
 
 .title-sub {
   position: relative;

@@ -18,20 +18,22 @@
                 Favoriten
             </md-subheader>
             <md-list layout="column">
-                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in todos | filter:data.user_search">
-                    <md-item-content>
-                        <div class="md-tile-left">
-                            <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">
-                            <md-tooltip>
-                                {{item.notes}}
-                            </md-tooltip>
-                        </div>
-                        <div class="md-tile-content">
-                            <h3>{{item.who}}</h3>
-                            <h4 class="title-sub">{{item.what}}</h4>
+                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.user_search">
+                    <a href="#/patient/{{item.cisPid}}">
+                        <md-item-content>
+                            <div class="md-tile-left">
+                                <img ng-src="{{item.face}}" class="face" alt="{{item.lastName}} {{item.firstName}}">
+                                <md-tooltip>
+                                    {{item.notes}}
+                                </md-tooltip>
+                            </div>
+                            <div class="md-tile-content">
+                                <h3>{{item.lastName}} {{item.firstName}}</h3>
+                                <h4 class="title-sub">{{item.birthday}} | {{item.age}}</h4>
 
-                        </div>
-                    </md-item-content>
+                            </div>
+                        </md-item-content>
+                    </a>
                     <md-divider></md-divider>
                 </md-item>
             </md-list>
@@ -41,18 +43,18 @@
             <md-subheader class="md-warn" style="background-color: #F5F5F5;">
                 All Patients
             </md-subheader>
-            <md-list>
-                <md-item ng-repeat="item in todos | filter:data.user_search">
+            <md-list layout="column">
+                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.user_search">
                     <md-item-content>
                         <div class="md-tile-left">
-                            <img ng-src="{{item.face}}" class="face" alt="{{item.who}}">
+                            <img ng-src="{{item.face}}" class="face" alt="{{item.lastName}} {{item.firstName}}">
                             <md-tooltip>
                                 {{item.notes}}
                             </md-tooltip>
                         </div>
                         <div class="md-tile-content">
-                            <h3>{{item.who}}</h3>
-                            <h4 class="title-sub">{{item.what}}</h4>
+                            <h3>{{item.lastName}} {{item.firstName}}</h3>
+                            <h4 class="title-sub">{{item.birthday}} | {{item.age}}</h4>
 
                         </div>
                     </md-item-content>

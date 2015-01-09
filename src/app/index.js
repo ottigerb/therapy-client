@@ -8,10 +8,19 @@ app.config(function($routeProvider) {
             templateUrl: 'app/main/main.html',
             controller: 'MainCtrl'
         })
+
+    .when('/patient/:pid', {
+        templateUrl: 'app/main/main.html',
+        controller: 'MainCtrl'
+    })
         .otherwise({
             redirectTo: '/'
         });
 });
+
+
+
+
 
 
 app.config(function($mdThemingProvider) {

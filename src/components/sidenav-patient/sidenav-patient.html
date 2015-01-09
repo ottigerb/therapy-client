@@ -22,9 +22,9 @@
                     <a href="#/patient/{{item.cisPid}}">
                         <md-item-content>
                             <div class="md-tile-left">
-                                <img ng-src="{{item.face}}" class="face" alt="{{item.lastName}} {{item.firstName}}">
+                                <optinomic-avatar patient-info="item"></optinomic-avatar>
                                 <md-tooltip>
-                                    {{item.notes}}
+                                    {{item.zipCode}} {{item.city}}
                                 </md-tooltip>
                             </div>
                             <div class="md-tile-content">
@@ -47,9 +47,9 @@
                 <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.user_search">
                     <md-item-content>
                         <div class="md-tile-left">
-                            <img ng-src="{{item.face}}" class="face" alt="{{item.lastName}} {{item.firstName}}">
+                            <optinomic-avatar patient-info="item"></optinomic-avatar>
                             <md-tooltip>
-                                {{item.notes}}
+                                {{item.zipCode}} {{item.city}}
                             </md-tooltip>
                         </div>
                         <div class="md-tile-content">

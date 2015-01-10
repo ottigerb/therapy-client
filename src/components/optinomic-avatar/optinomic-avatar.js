@@ -10,13 +10,15 @@ angular.module('therapyClient').directive('optinomicAvatar', function() {
 
             console.log('optinomicAvatar - Controller');
 
-
+            // --------------------------------
             // Initialen
+            // --------------------------------
             scope.initialen = scope.patientInfo.lastName.substring(0, 1) + scope.patientInfo.firstName.substring(0, 1);
             console.log('scope.patientInfo: ', scope.patientInfo);
 
+            // --------------------------------
             // Färben
-
+            // --------------------------------
             if (scope.patientInfo.gender === 'male') {
                 // --------------
                 // BLAU
@@ -116,8 +118,26 @@ angular.module('therapyClient').directive('optinomicAvatar', function() {
             }
 
 
+            // --------------------------------
+            // Line 1 & Line 2
+            // --------------------------------
+
+            scope.patientInfo.line1 = scope.patientInfo.lastName + ' ' + scope.patientInfo.firstName;
+
+            var laenge = 27;
+
+            if ( scope.patientInfo.line1.length > laenge) {
+            	scope.patientInfo.line1 = scope.patientInfo.line1.substring(0, (laenge-3)) + '...';	
+            } 
+
+            scope.patientInfo.line2 = scope.patientInfo.birthday + ' | ' + scope.patientInfo.age;
+
+            scope.patientInfo.lineTooltip = scope.patientInfo.country + ' - ' + scope.patientInfo.zipCode + ' ' + scope.patientInfo.city 
 
 
+            // --------------------------------
+            // Set
+            // --------------------------------
 
             scope.my1style = {
                 'color': scope.farbe

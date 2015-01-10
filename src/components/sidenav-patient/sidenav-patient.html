@@ -1,6 +1,6 @@
 <div ng-controller="SidenavPatient">
 
-    <md-content ng-style="styleNavbar()" resize style="background-color: #F5F5F5;">
+    <md-content ng-style="styleNavbar()" resize style="background-color: #EEEEEE;">
         <section>
 
             <div layout="row" layout-margin layout-fill layout-padding style="margin-top: -15px;">
@@ -14,22 +14,31 @@
         </section>
 
         <section style="margin-top: -30px;">
-            <md-subheader class="md-accent" style="background-color: #F5F5F5;">
+            <md-subheader class="md-accent" style="background-color: #EEEEEE;">
                 Favoriten
             </md-subheader>
             <md-list layout="column">
                 <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.user_search">
                     <a href="#/patient/{{item.cisPid}}">
-                        <md-item-content>
+                        <md-item-content class="optinomic-list-element">
                             <div class="md-tile-left">
                                 <optinomic-avatar patient-info="item"></optinomic-avatar>
+
                                 <md-tooltip>
-                                    {{item.zipCode}} {{item.city}}
+                                    <div class="optinomic-list-element-tooltip">
+
+
+
+                                        <p><i class="mdi-action-home"></i> {{item.lineTooltip}}</p>
+
+
+                                    </div>
                                 </md-tooltip>
+
                             </div>
                             <div class="md-tile-content">
-                                <h3>{{item.lastName}} {{item.firstName}}</h3>
-                                <h4 class="title-sub">{{item.birthday}} | {{item.age}}</h4>
+                                <h3>{{item.line1}}</h3>
+                                <h4 class="title-sub">{{item.line2}}</h4>
 
                             </div>
                         </md-item-content>
@@ -53,8 +62,8 @@
                             </md-tooltip>
                         </div>
                         <div class="md-tile-content">
-                            <h3>{{item.lastName}} {{item.firstName}}</h3>
-                            <h4 class="title-sub">{{item.birthday}} | {{item.age}}</h4>
+                            <h3>{{item.line1}}</h3>
+                            <h4 class="title-sub">{{item.line2}}</h4>
 
                         </div>
                     </md-item-content>

@@ -113,9 +113,22 @@ body {
   position: absolute;
   z-index: 200;
   top: -60px;
-  right: 0;
+  right: -3px;
 }
 
+.optinomic-list-element:hover {
+  background-color: #FAFAFA;
+}
+
+.optinomic-list-element-tooltip {
+  border: 0px solid;
+  border-radius: 5px;
+  background-color: #616161;
+  margin-top: -12px;
+  width: 220px;
+  height: 30px;
+  padding-left: 6px;
+}
 
 .md-tile-content {
   position: relative;

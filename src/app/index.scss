@@ -1,10 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
 
 
-
-
-
-
 $breakpoint : 960px; 
 
 
@@ -48,7 +44,7 @@ body {
 
     .optinomic-page{
       position: relative;
-      top: 73px;
+      top: 20px;
       margin-left: auto;
       margin-right: auto;
       max-width: $breakpoint;
@@ -98,10 +94,20 @@ body {
 }
 
 .optinomic-controls-left {
+  z-index: 500;
+  position: relative;
+  top: 10px;
+  left: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: $breakpoint;
+  max-width: $breakpoint;
+}
+
+.optinomic-logo-deco {
   position: absolute;
-  z-index: 200;
-  top: -60px;
-  left: 12px;
+  top: 120px;
+  left: 170px;
 }
 
 .optinomic-controls-left > h5 {

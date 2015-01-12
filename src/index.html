@@ -43,7 +43,26 @@
             </md-sidenav>
 
 
-            <div ng-view class="optinomic-page view-slide-in"></div>
+            <div layout="column" layout-fill class="">
+
+                <div hide-sm hide-md class="optinomic-controls-left">
+                    <optinomic-logo size="52" background=none fill="#3F51B5" animation="50" stroke="white" stroke-width="0" logo-src="components/optinomic-logo/optinomic.svg">
+                    </optinomic-logo>
+                </div>
+
+                <div hide-sm hide-md class="optinomic-logo-deco">
+                    <optinomic-logo size="2000" background=none fill="none" animation="1000" stroke="#EEEEEE" stroke-width="52">
+                    </optinomic-logo>
+                </div>
+
+
+                <div class="optinomic-page">
+                    <div ng-view class="view-animation"></div>
+                </div>
+            </div>
+
+
+
 
         </section>
 
@@ -89,6 +108,8 @@
     <!-- endbower -->
     <!-- endbuild -->
 
+    <script src="components/optinomic-logo/optinomix-logo.js"></script>
+    <script src="components/optinomic-logo/d3.v2.js"></script>
 
     <!-- build:js({.tmp,src}) scripts/app.js -->
     <!-- inject:js -->
@@ -96,6 +117,7 @@
     <script src="components/sidenav-patient/sidenav-patient.controller.js"></script>
     <script src="components/sidenav/sidenav.controller.js"></script>
     <script src="components/optinomic-page/optinomic-page.js"></script>
+    <script src="components/optinomic-logo/optinomic-logo.js"></script>
     <script src="components/optinomic-avatar/optinomic-avatar.js"></script>
     <script src="components/navbar/navbar.controller.js"></script>
     <script src="app/main/main.controller.js"></script>

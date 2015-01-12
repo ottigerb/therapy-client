@@ -283,7 +283,7 @@ app.factory('app_factory', function() {
         // ------------------------------------------
         // Colors
         // ------------------------------------------
-        color: 'md-accent',
+        color: 'md-primary',
         colors: [{
             text: 'text-primary',
             bg: 'bg-primary',

@@ -48,7 +48,19 @@ app.config(function($mdThemingProvider) {
 });
 
 
-
+// History - Back
+app.directive('back', ['$window',
+    function($window) {
+        return {
+            restrict: 'A',
+            link: function(scope, elem, attrs) {
+                elem.bind('click', function() {
+                    $window.history.back();
+                });
+            }
+        };
+    }
+]);
 
 // Resize (optinomic-page) - height 
 app.directive('resize', function($window) {

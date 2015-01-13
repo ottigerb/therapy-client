@@ -8,7 +8,7 @@
                     <i class="small mdi-action-search"></i>
                 </div>
                 <div flex>
-                    <md-text-float label="Filter / Search" ng-model="data.user_search"></md-text-float>
+                    <md-text-float label="Filter / Search" ng-model="data.userSearch"></md-text-float>
                 </div>
             </div>
         </section>
@@ -18,7 +18,7 @@
                 Favoriten
             </md-subheader>
             <md-list layout="column">
-                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.user_search">
+                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.userSearch">
                     <a href="#/patient/{{item.cisPid}}">
                         <md-item-content class="optinomic-list-element">
                             <div class="md-tile-left">
@@ -53,7 +53,7 @@
                 All Patients
             </md-subheader>
             <md-list layout="column">
-                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.user_search">
+                <md-item class="fx-fade-down fx-elastic fx-speed-350" ng-repeat="item in data.patients | filter:data.userSearch">
                     <md-item-content>
                         <div class="md-tile-left">
                             <optinomic-avatar patient-info="item"></optinomic-avatar>

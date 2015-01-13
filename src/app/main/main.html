@@ -30,9 +30,22 @@
 
 
 
+            <div class="row">
+
+                <md-button back>
+                    Back
+                </md-button>
+
+                <p class="flow-text">I am Flow Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique nostrum dignissimos quam sunt nihil, illo ab quo voluptatibus molestias cumque hic asperiores culpa dolorum, ipsam dolor, et minima natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
 
 
-            <p class="flow-text">I am Flow Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique nostrum dignissimos quam sunt nihil, illo ab quo voluptatibus molestias cumque hic asperiores culpa dolorum, ipsam dolor, et minima natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veniam, architecto? Adipisci a veniam pariatur soluta quos provident asperiores sapiente. Nisi ullam accusantium laboriosam aperiam reiciendis aliquam ratione, delectus voluptates.</p>
+
+                <div class="input-field col s12">
+                    <textarea class="materialize-textarea flow-text" required ng-model="data.userSearch"></textarea>
+                    <label>Notes</label>
+                </div>
+            </div>
+
             <md-button ng-click="openBottomSheet()">
                 Open a Bottom Sheet!
             </md-button>
@@ -42,18 +55,34 @@
 
 
     <div layout="row">
-        <div flex="33">
+        <div flex="50">
+            <p class="flow-text">I am Flow Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique nostrum dignissimos quam sunt nihil, illo ab quo voluptatibus molestias cumque hic asperiores culpa dolorum, ipsam dolor, et minima natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
             <md-button ng-click="toggleLeft()" class="md-primary" hide-gt-md aria-label="Open Sidenav Left">
                 <i class="mdi-action-account-circle prefix"></i> Menu
             </md-button>
         </div>
-        <div flex="55">
-            <p class="flow-text">I am Flow Text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque similique nostrum dignissimos quam sunt nihil, illo ab quo voluptatibus molestias cumque hic asperiores culpa dolorum, ipsam dolor, et minima natus.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis veniam, architecto? Adipisci a veniam pariatur soluta quos provident asperiores sapiente. Nisi ullam accusantium laboriosam aperiam reiciendis aliquam ratione, delectus voluptates.
-            </p>
+        <div flex="50">
+
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img src="http://www.britishairways.com/assets/images/destinations/components/mainCarousel/maldives/MV-MLE-BEACH-AXIOM-00150235-760x350.jpg">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">Card Title <i class="mdi-navigation-more-vert right"></i>
+                    </span>
+                    <p><a href="#/">This is a link</a>
+                    </p>
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">Card Title <i class="mdi-navigation-close right"></i>
+                    </span>
+                    <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                </div>
+            </div>
+
         </div>
-        <div flex>
-            [flex]
-        </div>
+
     </div>
 
 

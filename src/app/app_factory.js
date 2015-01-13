@@ -6,8 +6,8 @@ app.factory('app_factory', function() {
         // ------------------------------------------
         // Sidenav - Controls
         // ------------------------------------------
-        user_search: '',
-        watchlist_filter: true,
+        userSearch: '',
+        watchlistFilter: true,
 
 
 
